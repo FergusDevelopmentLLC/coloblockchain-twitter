@@ -1,6 +1,6 @@
 # coloblockchain-twitter
 
-private.py contains the twitter token_secret bits. It's gitignored.
+private.py contains the twitter token secret bits. It's gitignored.
 Setup here: https://apps.twitter.com/
 
 ```
