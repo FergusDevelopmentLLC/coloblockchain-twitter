@@ -10,5 +10,5 @@ twitterAuth = {
     'consumer_key': 'xxx',
     'consumer_secret': 'xxx'
 }
-prod_server_name = 'geodev-ubuntu-512mb-nyc3-01'
+prod_server_name = 'xxx' //socket.gethostname()
 ```
