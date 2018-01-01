@@ -34,18 +34,7 @@ twitter = Twitter(
 terms = ['Altcoin','Angel','App','ApplicationDevelopment','Bitcoin','Bitfinex','Blockchain','BlockchainSecurity','Boulder','BTC','Build','Builder','BuildTheFuture','Business','ChangeTheWorld','Code','Coinbase','Collaboration','CollaborationBetweenCreativeMinds','Colorado','ColoradoSprings','Community','ComputerProgramming','Consensus','ContractDevelopment','Create','Crypto','Crypto101','CryptoCurrency','CryptoGovenance','CryptoKitties','CryptoMiner','CryptoMining','CryptoTrader','CryptoTrading','DAPP','Decentralization','DecentralizedSystems','Demonetization','Denver','Dev','Developer','DigitalCurrency','Disrupt','Engineer','Enthusiast','Entrepreneur','ETH','ETHCommons','ETHDenver','Ethereum','ETHGlobal','ExchangeVolume','Fintech','FortCollins','Free','FreeForHackers','FrontRange','Funds','Future','FutureTech','GameChanger','Geek','GoEthereum','Hack','Hackathon','Hacker','HardwareWallet','HyperLedger','ICO','Internet','InternetOfThings','Investments','Investor','Javascript','KnowledgeSharing','Leader','Litecoin','Maker','Micropayments','Mining','Moonshot','Nerd','NewTechnology','NodeJs','Open','OpenSource','Programmer','Programming','Protocol','Python','RubyOnRails','SmartContracts','SoftwareDevelopment','Solidity','Startup','StartupBusinesses','Superdao','Team','Tech','Technology','Thought','token','Tokenize','Tokens','Tools','Trader','VirtualCurrency','Wallet','Web3','WomenInBlockchain','WomenInTech','WomensNetworking']
 
 screen_names = [
-# 'rabbyte'
-# 'weareopolis'
-# 'owocki'
-# 'SashainDenver',
-# 'MarkBeylin'
-# 'hannahparsons'
-#'DanielDougherty'
-# 'michaelgreen06'
-# 'coditch'
-# 'RhysLindmark'
-# 'cooperkernan'
-'davecraige'
+'coloblockchain'
 ]
 
 coloblockchain = twitter.followers.ids(screen_name = 'coloblockchain')
