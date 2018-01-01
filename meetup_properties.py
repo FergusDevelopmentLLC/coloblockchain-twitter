@@ -18,5 +18,9 @@ meetups = [
     {
         'key': 'Hyperledger-Denver',
         'image_url': 'https://secure.meetupstatic.com/photos/event/b/b/2/b/600_461087915.jpeg'
+    },
+    {
+        'key': 'Bitcoin-and-Beer',
+        'image_url': 'https://secure.meetupstatic.com/photos/event/9/6/2/9/600_462698441.jpeg'
     }
 ]

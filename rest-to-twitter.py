@@ -107,13 +107,13 @@ def tweetNextEventFor(group_config):
 
                     randomTerms = random.sample(set(upcomingMeetups[key]['categories']), 3)
 
-                    if(len(randomTerms) > 1):
+                    if(len(randomTerms) > 0):
                         tags = hashtagify(randomTerms[0])
 
-                    if(len(randomTerms) > 2):
+                    if(len(randomTerms) > 1):
                         tags = hashtagify(randomTerms[0]) + ' ' + hashtagify(randomTerms[1])
 
-                    if(len(randomTerms) > 3):
+                    if(len(randomTerms) > 2):
                         tags = hashtagify(randomTerms[0]) + ' ' + hashtagify(randomTerms[1]) + ' ' + hashtagify(randomTerms[2])
 
                     url = upcomingMeetups[key]['url']
