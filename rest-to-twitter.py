@@ -10,10 +10,7 @@ import logging
 import private as private
 import meetup_properties as meetup_properties
 
-logging.basicConfig(filename='tweets.log',level=logging.DEBUG)
-logging.debug('This message should go to the log file')
-logging.info('So should this')
-logging.warning('And this, too')
+logging.basicConfig(filename='log/tweets.log',level=logging.DEBUG,format='%(asctime)s|%(message)s')
 
 t = Twitter(
     auth=OAuth(
@@ -125,6 +122,8 @@ def tweetNextEventFor(group_config):
 
                     tweet_text = 'Next {0} #meetup. {1}. {2}. {3}. {4} {5} {6}'.format(groupname, summary, event_datetime, location, tags, url, image_url)
 
+                    logging.debug(tweet_text)
+
                     print
                     print(tweet_text)
 
@@ -136,8 +135,11 @@ def tweetNextEventFor(group_config):
 popConfigsToExecute()
 
 #print(configs_to_execute)
-
-for config in configs_to_execute:
-    tweetNextEventFor(config)
+if(len(configs_to_execute) > 0):
+    for config in configs_to_execute:
+        tweetNextEventFor(config)
+else:
+    logging.debug('no tweet')
+    print('no tweet')
 
 print("done")

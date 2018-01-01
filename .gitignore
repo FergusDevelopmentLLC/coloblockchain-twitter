@@ -2,3 +2,5 @@ private.py
 *.pyc
 *.log
 /output
+/log
+/data
