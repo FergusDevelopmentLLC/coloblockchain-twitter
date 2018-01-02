@@ -22,6 +22,22 @@ meetups = [
     {
         'key': 'Bitcoin-and-Beer',
         'image_url': 'https://secure.meetupstatic.com/photos/event/9/6/2/9/600_462698441.jpeg'
+    },
+    {
+        'key': 'Colorado-Springs-Blockchain-Crypto-Entrepreneurs',
+        'image_url': 'https://s18.postimg.org/xijufxsft/cryptocurrencies.jpg'
+    },
+    {
+        'key': 'Denver-Crypto-Group',
+        'image_url': 'https://secure.meetupstatic.com/photos/event/c/4/0/3/600_463970179.jpeg'
+    },
+    {
+        'key': 'Colorado-Springs-Bitcoin-Meetup',
+        'image_url': 'https://secure.meetupstatic.com/photos/event/5/e/e/5/600_466224293.jpeg'
+    },
+    {
+        'key': 'Colorado-Springs-Blockchain-Crypto-Entrepreneurs',
+        'image_url': 'https://s18.postimg.org/xijufxsft/cryptocurrencies.jpg'
     }
 ]
 

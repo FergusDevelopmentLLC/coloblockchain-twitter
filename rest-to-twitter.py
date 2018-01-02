@@ -6,11 +6,16 @@ import csv
 import socket
 import random
 import logging
+import os
 
 import private as private
 import meetup_properties as meetup_properties
 
-logging.basicConfig(filename='log/tweets.log',level=logging.DEBUG,format='%(asctime)s|%(message)s')
+dir_path = os.path.dirname(os.path.realpath(__file__))
+log_path = dir_path + '/log/tweets.log'
+logging.basicConfig(filename=log_path,level=logging.DEBUG,format='%(asctime)s|%(message)s')
+schedule_config = dir_path + '/schedule.csv'
+upcoming_meetups_url = 'http://104.236.16.91:8680/coloblockchain-meetups';
 
 t = Twitter(
     auth=OAuth(
@@ -29,11 +34,8 @@ today = datetime.today()
 if(isProduction):#adjust for mountain time in production
     today = datetime.today() - timedelta(hours=7)
 
-schedule_config = 'schedule.csv'
-
 configs_to_execute = [] #will be populated with the rows from group-config.csv that apply to the current datetime
 
-upcoming_meetups_url = 'http://104.236.16.91:8680/coloblockchain-meetups';
 upcomingMeetups = json.load(urllib2.urlopen(upcoming_meetups_url))
 
 def popConfigsToExecute(): #populates configs_to_execute with those that are in play
