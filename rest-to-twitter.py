@@ -34,6 +34,8 @@ today = datetime.today()
 if(isProduction):#adjust for mountain time in production
     today = datetime.today() - timedelta(hours=7)
 
+#isProduction = True
+
 configs_to_execute = [] #will be populated with the rows from group-config.csv that apply to the current datetime
 
 upcomingMeetups = json.load(urllib2.urlopen(upcoming_meetups_url))
@@ -57,6 +59,9 @@ def popConfigsToExecute(): #populates configs_to_execute with those that are in 
                     if value != 'No upcoming meetups scheduled.' and key == group_id and key == row[0]:
                         upcomingEventDateStart = datetime.strptime(upcomingMeetups[key]['start'], '%Y-%m-%dT%H:%M:%S.%fZ')
                         days_until = upcomingEventDateStart - today
+
+                        print(str(days_until.days) + " " + key)
+
                         tweetHours = row[2].split('|');
                         isTweetHour = False
 
@@ -117,12 +122,12 @@ def tweetNextEventFor(group_config):
 
                     url = upcomingMeetups[key]['url']
 
-                    image_url = ''
-                    for meetup in meetup_properties.meetups:
-                        if(meetup['key'] == key):
-                            image_url = meetup['image_url']
+                    # image_url = ''
+                    # for meetup in meetup_properties.meetups:
+                    #     if(meetup['key'] == key):
+                    #         image_url = meetup['image_url']
 
-                    tweet_text = 'Next {0} #meetup. {1}. {2}. {3}. {4} {5} {6}'.format(groupname, summary, event_datetime, location, tags, url, image_url)
+                    tweet_text = 'Next {0} #meetup. {1}. {2}. {3}. {4} {5}'.format(groupname, summary, event_datetime, location, tags, url)
 
                     logging.debug(tweet_text)
 

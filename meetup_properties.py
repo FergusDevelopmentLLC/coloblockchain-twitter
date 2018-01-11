@@ -4,6 +4,10 @@ meetups = [
         'image_url': 'https://secure.meetupstatic.com/photos/event/e/9/b/1/600_461039825.jpeg'
     },
     {
+        'key': 'Ethereum-Denver',
+        'image_url': 'https://secure.meetupstatic.com/photos/event/e/9/b/1/600_461039825.jpeg'
+    },
+    {
         'key': 'Boulder-Blockchain',
         'image_url': 'https://secure.meetupstatic.com/photos/event/e/9/b/1/600_461039825.jpeg'
     },
@@ -34,10 +38,6 @@ meetups = [
     {
         'key': 'Colorado-Springs-Bitcoin-Meetup',
         'image_url': 'https://secure.meetupstatic.com/photos/event/5/e/e/5/600_466224293.jpeg'
-    },
-    {
-        'key': 'Colorado-Springs-Blockchain-Crypto-Entrepreneurs',
-        'image_url': 'https://s18.postimg.org/xijufxsft/cryptocurrencies.jpg'
     }
 ]
 
